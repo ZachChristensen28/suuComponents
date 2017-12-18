@@ -1,0 +1,16 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $base-font;
+    font-size: $base-font-size;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

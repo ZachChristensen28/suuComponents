@@ -1,0 +1,41 @@
+/* Fonts */
+@font-face {
+    font-family: Roboto;
+    src: url('/css/fonts/Roboto-Light.ttf');
+    font-weight: lighter;
+}
+@font-face {
+    font-family: Roboto;
+    src: url('/css/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: Roboto;
+    src: url('/css/fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: RobotoCondensed;
+    src: url('/css/fonts/RobotoCondensed-Light.ttf');
+    font-weight: lighter;
+}
+@font-face {
+    font-family: RobotoCondensed;
+    src: url('/css/fonts/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+    font-family: RobotoCondensed;
+    src: url('/css/fonts/RobotoCondensed-Bold.ttf');
+    font-weight: bold;
+}
+
+/* Media Queries */
+@mixin mobile {
+    @media only screen and (max-width: $mobile-max-width) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media only screen and (min-width: $desktop-min-width) {
+        @content;
+    }
+}
