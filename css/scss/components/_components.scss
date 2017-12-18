@@ -1,161 +1,196 @@
-nav {
-    background-color: $suu-red;
-    display: grid;
-    grid-template-columns: 5fr auto auto;
-    height: 48px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-
-    @include desktop {
-        grid-template-columns: 1fr 10fr 1fr;
-        height: auto;
-    }
-
-    img {
-        -ms-flex-item-align: center;
-        align-self: center;
-        height: 36px;
-        margin-left: 4px;
-
-        @include desktop {
-            display: none;
-        }
-    }
-
-    .active {
-        background-color: #e6e7e8 !important;
-
-        i,
-        p {
-            color: #2F2F2F !important;
-        }
-    }
-
-    .mobile-button {
-        background-color: #2F2F2F;
-        cursor: pointer;
+.mobile {
+    nav {
+        background-color: $suu-red;
         display: grid;
-        padding: 6px 0;
+        grid-template-columns: 5fr auto auto;
+        height: 48px;
+        position: fixed;
+        top: 0;
+        width: 100%;
 
-        @include desktop {
-            display: none;
+        img {
+            -ms-flex-item-align: center;
+            align-self: center;
+            height: 36px;
+            margin-left: 4px;
+
+            @include desktop {
+                display: none;
+            }
         }
 
-        .mobile-navigation {
-            color: #fff;
-            display: grid;
-            justify-items: center;
-            grid-gap: 10px;
-            padding-left: 10px;
+        .active {
+            background-color: #e6e7e8 !important;
 
+            i,
             p {
-                font-size: 12px;
-                line-height: 0;
-                padding-bottom: 5px;
+                color: #2F2F2F !important;
+            }
+        }
+
+        .mobile-button {
+            background-color: #2F2F2F;
+            cursor: pointer;
+            display: grid;
+            padding: 6px 0;
+
+            @include desktop {
+                display: none;
+            }
+
+            .mobile-navigation {
+                color: #fff;
+                display: grid;
+                justify-items: center;
+                grid-gap: 10px;
+                padding-left: 10px;
+
+                p {
+                    font-size: 12px;
+                    line-height: 0;
+                    padding-bottom: 5px;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+
+                i {
+                    font-size: 24px;
+                    padding-top: 2px;
+                }
+
+                @include desktop {
+                    display: none;
+                }
+            }
+        }
+
+        .navigation {
+            background-color: #e6e7e8;
+            position: fixed;
+            right: 0;
+            top: 48px;
+            height: calc(100% - 47px);
+            margin-bottom: 150px;
+            overflow-y: auto;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            width: 0;
+            z-index: 1000;
+
+            @include desktop {
+                background-color: inherit;
+                font-size: 1.1em;
+                height: auto;
+                letter-spacing: 1.5px;
+                min-height: 70px;
+                position: relative;
+                text-align: center;
+                top: 0;
+                width: 100%;
+            }
+
+            .container {
+                border-bottom: 3px solid #8C8C8C;
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 0 10px;
                 text-transform: uppercase;
-                margin: 0;
+
+                a {
+                    color: #4c4c4c;
+                    letter-spacing: 1px;
+                    line-height: 18px;
+                    padding: 10px;
+
+                    &:not(:nth-child(6)) {
+                        border-bottom: 1px solid $border-color;
+                    }
+                }
+
+                .desktop-only {
+                    display: none;
+                }
+
+                @include desktop {
+                    border-bottom: 0;
+                    grid-template-columns: repeat(7, 1fr);
+
+                    a {
+                        border-bottom: 0 !important;
+                        color: #fff;
+                    }
+
+                    .desktop-only {
+                        display: block;
+                    }
+                }
             }
 
-            i {
-                font-size: 24px;
-                padding-top: 2px;
-            }
-        }
-    }
+            .sub-navigation {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 0 10px;
 
-    .navigation {
-        background-color: #e6e7e8;
-        position: fixed;
-        right: 0;
-        top: 48px;
-        height: calc(100% - 47px);
-        margin-bottom: 150px;
-        overflow-y: auto;
-        -webkit-transition-duration: 1s;
-        transition-duration: 1s;
-        width: 0;
-        z-index: 1000;
+                a {
+                    color: #4c4c4c;
+                    line-height: 18px;
+                    padding: 10px;
 
-        .container {
-            border-bottom: 3px solid #8C8C8C;
-            display: grid;
-            grid-template-columns: 1fr;
-            padding: 0 10px;
-            text-transform: uppercase;
+                    &:not(:nth-child(7)) {
+                        border-bottom: 1px solid $border-color;
+                    }
+                }
 
-            a {
-                color: #4c4c4c;
-                letter-spacing: 1px;
-                line-height: 18px;
-                padding: 10px;
-
-                &:not(:nth-child(6)) {
-                    border-bottom: 1px solid $border-color;
+                @include desktop {
+                    display: none;
                 }
             }
         }
 
-        .sub-navigation {
-            display: grid;
-            grid-template-columns: 1fr;
-            padding: 0 10px;
+        .search-navigation {
+            background-color: #e6e7e8;
+            position: fixed;
+            right: 0;
+            top: 48px;
+            height: calc(100% - 47px);
+            margin-bottom: 150px;
+            overflow-y: auto;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            width: 0;
+            z-index: 1000;
 
-            a {
-                color: #4c4c4c;
-                line-height: 18px;
-                padding: 10px;
+            .search-box {
 
-                &:not(:nth-child(7)) {
-                    border-bottom: 1px solid $border-color;
+                border-bottom: 3px solid #8C8C8C;
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+                text-transform: uppercase;
+
+                a {
+                    color: #4c4c4c;
+                    letter-spacing: 1px;
+                    line-height: 18px;
+                    padding: 10px;
+
                 }
-            }
-        }
-    }
-
-    .search-navigation {
-        background-color: #e6e7e8;
-        position: fixed;
-        right: 0;
-        top: 48px;
-        height: calc(100% - 47px);
-        margin-bottom: 150px;
-        overflow-y: auto;
-        -webkit-transition-duration: 1s;
-        transition-duration: 1s;
-        width: 0;
-        z-index: 1000;
-
-        .search-box {
-
-            border-bottom: 3px solid #8C8C8C;
-            display: grid;
-            grid-template-columns: 1fr;
-            padding: 0 10px;
-            text-transform: uppercase;
-
-            a {
-                color: #4c4c4c;
-                letter-spacing: 1px;
-                line-height: 18px;
-                padding: 10px;
 
             }
 
-        }
+            .search-items {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 0 10px;
 
-        .search-items {
-            display: grid;
-            grid-template-columns: 1fr;
-            padding: 0 10px;
+                a {
+                    color: #4c4c4c;
+                    line-height: 18px;
+                    padding: 10px;
 
-            a {
-                color: #4c4c4c;
-                line-height: 18px;
-                padding: 10px;
-
-                &:not(:nth-child(3)) {
-                    border-bottom: 1px solid $border-color;
+                    &:not(:nth-child(3)) {
+                        border-bottom: 1px solid $border-color;
+                    }
                 }
             }
         }

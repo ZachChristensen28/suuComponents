@@ -1,0 +1,76 @@
+.desktop {
+    nav {
+        background-color: $suu-red;
+
+        .container {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(7, 1fr);
+            min-height: 70px;
+            margin: auto;
+            width: 80%;
+            max-width: 1170px;
+
+            a {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                color: #fff;
+                font-size: 1.1em;
+                letter-spacing: 1.5px;
+                line-height: 1.1em;
+                margin: 0 5px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .nav-condense {
+                font-size: 95%;
+                letter-spacing: -1px;
+            }
+        }
+    }
+
+    .sub-nav {
+        background-color: #e6e7e8;
+
+        .sub-nav-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: auto;
+            width: 90%;
+            max-width: 1170px;
+        }
+
+        a {
+            color: #333;
+            font-size: .9em;
+            line-height: 2rem;
+            letter-spacing: .4px;
+            padding-right: 6px;
+            margin-right: 4px;
+
+            &:hover {
+                color: lighten(#333, 15%);
+            }
+        }
+
+        .first {
+            a:not(:nth-child(3)) {
+                border-right: 1px solid #333;
+            }
+        }
+
+        .second {
+            justify-self: end;
+
+            a:not(:nth-child(5)) {
+                border-right: 1px solid #333;
+            }
+        }
+    }
+
+}
