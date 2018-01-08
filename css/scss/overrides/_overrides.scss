@@ -6,3 +6,9 @@
 .padding-right {
     padding-right: 5px;
 }
+
+@include mobile {
+    .desktop-only {
+        display: none;
+    }
+}

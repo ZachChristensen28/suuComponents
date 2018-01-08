@@ -34,8 +34,21 @@
         @content;
     }
 }
+
+@mixin above-tablet {
+    @media only screen and (min-width: $mobile-max-width + 1) {
+        @content
+    }
+}
+
 @mixin desktop {
     @media only screen and (min-width: $desktop-min-width) {
+        @content;
+    }
+}
+
+@mixin desktop-xl {
+    @media only screen and (min-width: $desktop-xl) {
         @content;
     }
 }

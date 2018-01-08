@@ -1,5 +1,6 @@
-.desktop {
-    nav {
+
+@include above-tablet {
+    .navigation {
         background-color: $suu-red;
 
         .container {
@@ -11,7 +12,7 @@
             grid-template-columns: repeat(7, 1fr);
             min-height: 70px;
             margin: auto;
-            width: 80%;
+            width: 95%;
             max-width: 1170px;
 
             a {
@@ -28,8 +29,21 @@
             }
 
             .nav-condense {
-                font-size: 95%;
+                font-size: .95em;
                 letter-spacing: -1px;
+            }
+
+            @include desktop {
+                .nav-condense {
+                    letter-spacing: inherit;
+                    font-size: 1.1em;
+                }
+            }
+
+            @include desktop-xl {
+                .container {
+                    width: 80%;
+                }
             }
         }
     }
@@ -41,7 +55,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             margin: auto;
-            width: 90%;
+            width: 95%;
             max-width: 1170px;
         }
 
@@ -72,5 +86,4 @@
             }
         }
     }
-
 }

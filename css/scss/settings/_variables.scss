@@ -2,5 +2,6 @@ $base-font: 'RobotoCondensed';
 $base-font-size: 16px;
 $suu-red: #ce181f;
 $border-color: #B6B6B6;
-$mobile-max-width: 767px;
-$desktop-min-width: $mobile-max-width + 1;
+$mobile-max-width: 767px; //$tablet-max-width
+$desktop-min-width: 980px;
+$desktop-xl: 1200px;
