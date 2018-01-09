@@ -1,0 +1,124 @@
+footer {
+    background-color: #2F2F2F;
+    color: $white;
+    padding: 20px 0 50px;
+    font-family: $footer-font, sans-serif;
+    font-size: .9em;
+    line-height: 1.7em;
+    letter-spacing: .4px;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        @include above-tablet {
+            grid-template-columns: 1fr 4fr;
+            justify-items: start;
+            margin: auto;
+            width: 95%;
+            max-width: 1170px;
+        }
+
+        .footer-brand {
+            display: grid;
+
+            img {
+                margin-bottom: 25px;
+                justify-self: center;
+
+                @include above-tablet {
+                    margin-bottom: 0;
+                    grid-row: 1 / 4;
+                }
+            }
+
+            .social-media {
+                display: grid;
+                justify-items: center;
+                grid-template-columns: repeat(5, minmax(50px, 1fr));
+
+                span {
+                    font-size: 1.5em;
+                }
+
+                @include above-tablet {
+                    grid-template-columns: repeat(5, minmax(40px, 1fr));
+                    grid-row: 4 / 6;
+                }
+
+                @include desktop {
+                    grid-row: 5 / 7;
+                }
+            }
+            @include above-tablet {
+                grid-template-rows: repeat(8, 1fr);
+            }
+
+        }
+
+        .campus-links {
+            display: grid;
+            grid-gap: 25px;
+            justify-items: center;
+            margin-bottom: 25px;
+            margin-top: 25px;
+
+            @include above-tablet {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                grid-auto-flow: column;
+                grid-gap: 0;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: repeat(4, auto);
+                justify-items: start;
+                margin-top: 0;
+                margin-left: 15px;
+                width: 100%;
+
+                a {
+                    padding: 0 5px 1em;
+                }
+            }
+        }
+    }
+
+    .suu-brand-bar {
+        background-color: $suu-red;
+        font-size: 1.3em;
+        font-family: $fira-font, sans-serif;
+        font-weight: bolder;
+        letter-spacing: .1em;
+        padding: .5em;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        @include above-tablet {
+            font-size: 1.5em;
+            grid-column: 1 / -1;
+        }
+    }
+
+    .suu-details {
+        address {
+            font-style: normal;
+            line-height: 18px;
+            padding: .7em 0;
+            margin-bottom: 18px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        @include above-tablet {
+            grid-column: 1 / -1;
+        }
+    }
+
+}

@@ -7,6 +7,8 @@
 @font-face {
     font-family: Roboto;
     src: url('/css/fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: Roboto;
@@ -26,6 +28,27 @@
     font-family: RobotoCondensed;
     src: url('/css/fonts/RobotoCondensed-Bold.ttf');
     font-weight: bold;
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url('/fonts/FiraSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url('/fonts/FiraSans-SemiBold.ttf');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url('/fonts/FiraSans-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
 }
 
 /* Media Queries */
