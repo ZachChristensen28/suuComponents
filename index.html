@@ -9,6 +9,7 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="/css/dest/main.css">
+
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/c76dc55576.css" media="all">
 
@@ -17,55 +18,71 @@
     <script type="text/javascript" src="/js/custom.js" defer></script>
 </head>
 
-<body class="mobile">
-    <nav>
-
-        <img src="/img/suu-mobile-banner.png" alt="Southern Utah University Logo">
-        <div class="mobile-button" id="menu" role="button">
-            <div class="mobile-navigation border-right" id="border">
-                <!-- <a href="/#site-menu" onclick="myFunction()"> -->
-                <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
-                <p>Menu</p>
+<body>
+    <header>
+        <nav>
+            <!-- MOBILE BUTTONS -->
+            <img class="mobile-only" src="/img/suu-mobile-banner.png" alt="Southern Utah University Logo">
+            <div class="mobile-button-container mobile-only" id="menu" role="button">
+                <div class="mobile-button-item border-right" id="border">
+                    <!-- <a href="/#site-menu" onclick="myFunction()"> -->
+                    <span class="fa fa-bars fa-lg" aria-hidden="true"></span>
+                    <p>Menu</p>
+                </div>
             </div>
-        </div>
-        <!--</a>-->
-        <div class="mobile-button" id="search" role="button">
-            <div class="mobile-navigation padding-right">
-                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                <p>Search</p>
+            <!--</a>-->
+            <div class="mobile-button-container mobile-only" id="search" role="button">
+                <div class="mobile-button-item padding-right">
+                    <span class="fa fa-search fa-lg" aria-hidden="true"></span>
+                    <p>Search</p>
+                </div>
             </div>
-        </div>
-        <div class="navigation">
-            <div class="container">
-                <a href="">Majors</a>
-                <a href="">Scholarships &amp; Tuition</a>
-                <a href="">Academics</a>
-                <a href="" class="desktop-only"><img src="/img/branding-bar-suu.png" alt="Southern Utah University Logo"></a>
-                <a href="">College Life</a>
-                <a href="">Visit</a>
-                <a href="">Apply</a>
+            <!-- END MOBILE BUTTONS -->
+            <!-- NAVIGATION -->
+            <div class="mobile-navigation">
+                <div class="main-navigation">
+                    <div class="container">
+                        <a href="">Majors</a>
+                        <a class="nav-condense" href="">Scholarships &amp; Tuition</a>
+                        <a href="">Academics</a>
+                        <a href="" class="desktop-only"><img src="./img/branding-bar-suu.png" alt="Southern Utah University Logo"></a>
+                        <a href="">College Life</a>
+                        <a href="">Visit</a>
+                        <a href="">Apply</a>
+                    </div>
+                </div>
+                <div class="sub-navigation">
+                    <div class="sub-nav-container">
+                        <div class="first">
+                            <a href="">mySUU Portal</a>
+                            <a href="">Current Students</a>
+                            <a href="">Faculty &amp; Staff</a>
+                        </div>
+                        <div class="second">
+                            <a href="">Alumni</a>
+                            <a href="">Calender</a>
+                            <a href="">Visitors</a>
+                            <a href="">Giving to SUU</a>
+                            <a href="">Search</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="sub-navigation">
-                <a href="">mySUU Portal</a>
-                <a href="">Current Students</a>
-                <a href="">Faculty &amp; Staff</a>
-                <a href="">Alumni</a>
-                <a href="">Calender</a>
-                <a href="">Visitors</a>
-                <a href="">Giving to SUU</a>
+            <!-- END NAVIGATION -->
+            <!-- MOBILE SEARCH NAVIGATION -->
+            <div class="search-navigation mobile-only">
+                <div class="search-box">
+                    <a href="">Search box goes here</a>
+                </div>
+                <div class="search-items">
+                    <a href="">Faculty, Staff, or Student Directory</a>
+                    <a href="">A-Z listing of departments</a>
+                    <a href="">Tech Help</a>
+                </div>
             </div>
-        </div>
-        <div class="search-navigation">
-            <div class="search-box">
-                <a href="">Search box goes here</a>
-            </div>
-            <div class="search-items">
-                <a href="">Faculty, Staff, or Student Directory</a>
-                <a href="">A-Z listing of departments</a>
-                <a href="">Tech Help</a>
-            </div>
-        </div>
-    </nav>
+            <!-- END MOBILE SEARCH NAVIGATION -->
+        </nav>
+    </header>
 </body>
 
 </html>

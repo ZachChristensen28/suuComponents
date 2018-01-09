@@ -64,10 +64,10 @@ $(function() {
     if ($(menu).hasClass('active') != true) {
       $(menu).addClass('active');
       $('#border').css('border-right-color', '#e6e7e8');
-      $('.navigation').css('width', '80%');
+      $('.mobile-navigation').css('width', '80%');
       menuIsActive = true;
     } else {
-      $('.navigation').css('width', '0');
+      $('.mobile-navigation').css('width', '0');
       $('#border').css('border-right-color', '#777777');
       $(menu).removeClass('active');
       menuIsActive = false;

@@ -1,4 +1,4 @@
-.mobile {
+@include mobile {
     nav {
         background-color: $suu-red;
         display: grid;
@@ -28,17 +28,13 @@
             }
         }
 
-        .mobile-button {
+        .mobile-button-container {
             background-color: #2F2F2F;
             cursor: pointer;
             display: grid;
             padding: 6px 0;
 
-            @include desktop {
-                display: none;
-            }
-
-            .mobile-navigation {
+            .mobile-button-item {
                 color: #fff;
                 display: grid;
                 justify-items: center;
@@ -57,14 +53,10 @@
                     font-size: 24px;
                     padding-top: 2px;
                 }
-
-                @include desktop {
-                    display: none;
-                }
             }
         }
 
-        .navigation {
+        .mobile-navigation {
             background-color: #e6e7e8;
             position: fixed;
             right: 0;
@@ -76,73 +68,40 @@
             transition-duration: 1s;
             width: 0;
             z-index: 1000;
+        }
 
-            @include desktop {
-                background-color: inherit;
-                font-size: 1.1em;
-                height: auto;
-                letter-spacing: 1.5px;
-                min-height: 70px;
-                position: relative;
-                text-align: center;
-                top: 0;
-                width: 100%;
-            }
+        .container {
+            border-bottom: 3px solid #8C8C8C;
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 10px;
 
-            .container {
-                border-bottom: 3px solid #8C8C8C;
-                display: grid;
-                grid-template-columns: 1fr;
-                padding: 0 10px;
+            a {
+                color: #4c4c4c;
+                letter-spacing: 1px;
+                line-height: 18px;
+                padding: 10px;
                 text-transform: uppercase;
 
-                a {
-                    color: #4c4c4c;
-                    letter-spacing: 1px;
-                    line-height: 18px;
-                    padding: 10px;
-
-                    &:not(:nth-child(6)) {
-                        border-bottom: 1px solid $border-color;
-                    }
-                }
-
-                .desktop-only {
-                    display: none;
-                }
-
-                @include desktop {
-                    border-bottom: 0;
-                    grid-template-columns: repeat(7, 1fr);
-
-                    a {
-                        border-bottom: 0 !important;
-                        color: #fff;
-                    }
-
-                    .desktop-only {
-                        display: block;
-                    }
+                &:not(:nth-child(7)) {
+                    border-bottom: 1px solid $border-color;
                 }
             }
+        }
 
-            .sub-navigation {
-                display: grid;
-                grid-template-columns: 1fr;
-                padding: 0 10px;
+        .first,
+        .second {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 10px;
 
-                a {
-                    color: #4c4c4c;
-                    line-height: 18px;
-                    padding: 10px;
+            a {
+                color: #4c4c4c;
+                line-height: 18px;
+                padding: 10px;
 
-                    &:not(:nth-child(7)) {
-                        border-bottom: 1px solid $border-color;
-                    }
-                }
-
-                @include desktop {
-                    display: none;
+                &:not(:nth-child(7)) {
+                    border-bottom: 1px solid $border-color;
                 }
             }
         }
@@ -192,6 +151,94 @@
                         border-bottom: 1px solid $border-color;
                     }
                 }
+            }
+        }
+    }
+}
+@include above-tablet {
+    .main-navigation {
+        background-color: $suu-red;
+
+        .container {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(7, 1fr);
+            min-height: 70px;
+            margin: auto;
+            width: 95%;
+            max-width: 1170px;
+
+            a {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                color: #fff;
+                font-size: 1.1em;
+                letter-spacing: 1.5px;
+                line-height: 1.1em;
+                margin: 0 5px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .nav-condense {
+                font-size: .95em;
+                letter-spacing: -1px;
+            }
+
+            @include desktop {
+                .nav-condense {
+                    letter-spacing: inherit;
+                    font-size: 1.1em;
+                }
+            }
+
+            @include desktop-xl {
+                .container {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    .sub-navigation {
+        background-color: #e6e7e8;
+
+        .sub-nav-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: auto;
+            width: 95%;
+            max-width: 1170px;
+        }
+
+        a {
+            color: #333;
+            font-size: .9em;
+            line-height: 2rem;
+            letter-spacing: .4px;
+            padding-right: 6px;
+            margin-right: 4px;
+
+            &:hover {
+                color: lighten(#333, 15%);
+            }
+        }
+
+        .first {
+            a:not(:nth-child(3)) {
+                border-right: 1px solid #333;
+            }
+        }
+
+        .second {
+            justify-self: end;
+
+            a:not(:nth-child(5)) {
+                border-right: 1px solid #333;
             }
         }
     }

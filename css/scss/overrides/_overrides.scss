@@ -12,3 +12,9 @@
         display: none;
     }
 }
+
+@include above-tablet {
+    .mobile-only {
+        display: none;
+    }
+}
